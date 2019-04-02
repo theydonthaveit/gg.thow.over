@@ -1,0 +1,28 @@
+version: "3.7"
+
+services:
+  frontend:
+    build:
+      context: ./frontend/
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ./frontend/public:/home/app/public
+      - ./frontend/src:/home/app/src
+      - ./frontend/.env.development:/home/app/.env.development
+      - ./frontend/package.json:/home/app/package.json
+      - ./frontend/yarn.lock:/home/app/yarn.lock
+    restart: always
+    ports:
+      - "3000:80"
+  # backend:
+  #   build:
+  #     context: ./backend/
+  #     dockerfile: Dockerfile
+  #   environment:
+  #     - DEBUG=--reload
+  #   volumes:
+  #     - ./backend/server.py:/home/server.py
+  #     - ./backend/data.json:/home/data.json
+  #   restart: always
+  #   # ports:
+  #   #   - "5000:80"

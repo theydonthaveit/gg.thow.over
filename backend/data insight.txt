@@ -1,0 +1,23 @@
+insight in the data
+
+at what point was I stronger than a certain player
+did I extend my lead
+did I take a fight against someone stronger than me
+my position on the map
+isolated death
+summoner spell tracking
+item cooldown tracking
+spell cooldown tracking
+
+who I played against
+what position are they now
+how well did they play in the game against me
+my stats compared to theres (gold, cs, kda, kp)
+
+what kind of player am I
+did my wards assist in deaths and / or saving players and / or taking objects
+
+which champs I lose to most often
+which champs I win against most often
+which comps I work well / bad with / against
+which champs I win with most often
