@@ -1,0 +1,119 @@
+directory layout (no need for db just yet)
+
+summoner name/
+    account info:
+        summoner level
+        account id
+        id
+        revision data
+        tier
+        rank
+        league points
+        wins
+        losses
+    no account info:
+        name
+        reason
+    match details:
+        championId
+        gameDuration
+        gameVersion
+        team_firstBlood
+        team_firstDragon
+        team_dragonKills
+        team_firstRiftHerald
+        team_riftHeraldKills
+        team_firstBaron
+        team_baronKills
+        team_firstInhibitor
+        team_inhibitorKills
+        team_firstTower
+        team_towerKills
+    no match details:
+        name
+        reason
+
+
+
+
+data by sections
+KILLS:
+firstBloodKill
+firstBloodAssist
+kills
+assists
+killingSprees
+largestMultiKill
+largestKillingSpree
+doubleKills
+tripleKills
+quadraKills
+pentaKills
+
+damage:
+largestCriticalStrike
+magicDamageDealt
+magicDamageDealtToChampions
+physicalDamageDealtToChampions
+trueDamageDealt
+physicalDamageDealt
+totalDamageDealtToChampions
+totalDamageDealt
+trueDamageDealtToChampions
+
+CS:
+neutralMinionsKilled
+neutralMinionsKilledTeamJungle
+neutralMinionsKilledEnemyJungle
+totalMinionsKilled
+
+objectives:
+damageDealtToTurrets
+damageDealtToObjectives
+firstInhibitorKill
+turretKills
+firstTowerAssist
+firstTowerKill
+inhibitorKills
+firstInhibitorAssist
+
+items:
+item0
+item1
+item2
+item3
+item4
+item5
+item6
+
+damage taken:
+trueDamageTaken
+magicalDamageTaken
+damageSelfMitigated
+totalDamageTaken
+physicalDamageTaken
+
+overall performance:
+champLevel
+longestTimeSpentLiving
+visionScore
+wardsKilled
+goldSpent
+sightWardsBoughtInGame
+win
+deaths
+wardsPlaced
+goldEarned
+visionWardsBoughtInGame
+
+healing:
+totalHealth
+totalUnitsHealed
+
+CC:
+totalTimeCrowdControlDealt
+timeCCingOthers
+
+game stats:
+spell1Id
+spell2Id

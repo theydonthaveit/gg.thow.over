@@ -1,0 +1,257 @@
+summoner info:
+    profileIcon
+    summonerLevel
+    accountId
+    id
+    revisionDate (use this to update profile)
+
+queue info:
+    tier
+    hotStreak
+    wins
+    losses
+    rank
+    leagueName
+    position
+    queueType
+    leaguePoints
+
+matches:
+    lane
+    gameId
+    champion
+    platformId
+    queue
+    role
+    season
+
+match info:
+    seasonId
+    gameDuration
+    gameCreation
+    # participantIdentities (use to build out other profiles and stats)
+    #     player
+    #         accountId
+    #         profileIcon
+    #         summonerId
+    #     participantId
+    gameVersion
+    teams
+        firstDragon?
+        bans (ban stats)
+            championId
+        firstInhibitor
+        win 
+        firstRiftHerald
+        firstBaron
+        baronKills
+        riftHeraldKills
+        firstBlood
+        teamId
+        firstTower
+        inhibitorKills
+        towerKills
+        dragonKills
+    participants
+        stats (role and champ specific)
+            # kills
+            # tripleKills
+            # largestMultiKill
+            # longestTimeSpentLiving
+            # totalTimeCrowdControlDealt
+            # magicDamageDealtToChampions
+            # physicalDamageDealtToChampions
+            # neutralMinionsKilled
+            # neutralMinionsKilledTeamJungle
+            # damageDealtToTurrets
+            # damageDealtToObjectives
+            # visionScore (creating a new vision score)
+            # totalUnitsHealed
+            # totalDamageTaken
+            # wardsKilled
+            # largestCriticalStrike
+            # largestKillingSpree
+            # quadraKills
+            # magicDamageDealt
+            # firstBloodAssist
+            # item0
+            # item1
+            # item2
+            # item3
+            # item4
+            # item5
+            # item6
+            # damageSelfMitigated
+            # magicalDamageTaken
+            # firstInhibitorKill
+            # trueDamageTaken
+            # assists
+            # goldSpent
+            # trueDamageDealt
+            participantId?
+            # physicalDamageDealt
+            # sightWardsBoughtInGame
+            # totalDamageDealtToChampions
+            # physicalDamageTaken
+            # win
+            objectivePlayerScore?
+            # totalDamageDealt
+            # neutralMinionsKilledEnemyJungle
+            # deaths
+            # wardsPlaced
+            # turretKills
+            # firstBloodKill
+            # trueDamageDealtToChampions
+            # goldEarned
+            # killingSprees
+            unrealKills?
+            # firstTowerAssist
+            # firstTowerKill
+            # champLevel
+            # doubleKills
+            # inhibitorKills
+            # firstInhibitorAssist
+            combatPlayerScore?
+            # visionWardsBoughtInGame
+            # pentaKills
+            # totalHeal
+            # totalMinionsKilled
+            # timeCCingOthers
+            # spell1Id
+            participantId
+            highestAchievedSeasonTier
+            # spell2Id
+            timeline
+                lane
+                csDiffPerMinDeltas
+                goldPerMinDeltas
+                xpDiffPerMinDeltas
+                creepsPerMinDeltas
+                xpPerMinDeltas
+                damageTakenDiffPerMinDeltas
+                damageTakenPerMinDeltas
+            championId
+
+match timeline info:
+    frames
+        timestamp
+        participantFrames
+            totalGold
+            teamScore
+            participantId
+            level
+            currentGold
+            minionsKilled
+            dominionScore
+            position:
+                y
+                x
+            xp
+            jungleMinionsKilled
+        events
+            itemId
+            timestamp (current timestamp - next timestamp)
+            type
+            participantId
+            skillSlot9
+            levelUpType (NORMAL, EVOLVE)
+            buildingType (TOWER_BUILDING, INHIBITOR_BUILDING)
+            towerType (OUTER_TURRET, INNER_TURRET, BASE_TURRET, UNDEFINED_TURRET, NEXUS_TURRET)
+            laneType (TOP_LANE, BOT_LANE, MID_LANE)
+            wardType (UNDEFINED, SIGHT_WARD, YELLOW_TRINKET, BLUE_TRINKET, CONTROL_WARD)
+            creatorId (wards)
+            killerId
+            victimId
+            assistingParticipantIds
+            position: (for champ kills)
+                x
+                y
+            monsterType (DRAGON, BARON_NASHOR, RIFTHERALD)
+            monsterSubType (WATER_DRAGON, FIRE_DRAGON, MOUNTAIN_DRAGON, ELDER_DRAGON)
+
+champion:
+    version
+    key (int)
+    name
+    title
+    blurb
+    info:
+        attack
+        defense
+        magic
+        difficulty
+    tags
+    partype (none, mp, heat, battlefury, energy, BloodWell)
+    stats:
+        hp
+        hpperlevel
+        mp
+        mpperlevel
+        movespeed
+        armor
+        armorperlevel
+        spellblock
+        spellblockperlevel
+        attackrange
+        hpregen
+        hpregenperlevel
+        mpregen
+        mpregenperlevel
+        crit
+        critperlevel
+        attackdamage
+        attackdamageperlevel
+        attackspeedoffset
+        attackspeedperlevel
+
+champion:
+    version
+    data
+        champ
+            key
+            name
+            title
+            allytips
+            enemytips
+            tags
+            partype (none, mp, heat, battlefury, energy, BloodWell)
+            info:
+                attack
+                defense
+                magic
+                difficulty
+            stats:
+                hp
+                hpperlevel
+                mp
+                mpperlevel
+                movespeed
+                armor
+                armorperlevel
+                spellblock
+                spellblockperlevel
+                attackrange
+                hpregen
+                hpregenperlevel
+                mpregen
+                mpregenperlevel
+                crit
+                critperlevel
+                attackdamage
+                attackdamageperlevel
+                attackspeedoffset
+                attackspeedperlevel
+            spells:
+                name
+                tooltip (inspect to retrieve relevant info)
+                maxrank
+                cooldown
+                cost
+                effect
+                vars:
+                    link (bonusattackdamage, spelldamage, armor)
+                    coeff
+                    key (a1, f1)
+                costType
+                range
+                resource

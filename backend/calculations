@@ -1,0 +1,54 @@
+calculations
+
+
+vision score:
+all wards placed
+all wards removed
+sight wards used to clear wards
+sight wards used
+vision wards used
+vision wards used to clear wards
+general wards placed
+ward / sight ward lasting time
+number of wards enemy has placed : number of enemy wards removed
+
+
+objective taking involvement:
+damageDealtToObjectives
+damageDealtToTurrets
+
+
+kill importance:
+damage
+kills secured
+KA
+kills
+tripleKills
+quadraKills
+largestMultiKill
+firstBloodAssist
+
+
+map importance:
+longestTimeSpentLiving
+
+
+damage dealt to gold earned:
+magicDamageDealtToChampions
+physicalDamageDealtToChampions
+magicDamageDealt
+
+CS:
+
+
+general role importance:
+totalUnitsHealed
+
+
+general champion type importance:
+
+
+work out peaks and item spikes and combos that are amazing:
+
+importance in killing positions:
+firstblood, assists, damage
