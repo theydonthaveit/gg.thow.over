@@ -25,3 +25,5 @@ frontend/yarn-error.log*
 
 backend/challengers
 backend/*.json
+.vscode
+**/*pycache*
