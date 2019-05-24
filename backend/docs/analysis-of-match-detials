@@ -1,0 +1,115 @@
+gameDuration
+    depict average length of game for you and can be used in general
+
+teams:
+    teamID, win:
+    used to find out if you were on the winning or losing team
+    firstBlood, firstTower, firstInhib, firstDrake, firstRiftH:
+    do you get any of these first as part of the team
+    towerkills, inhibkills, baronkills, drakekills, riftHkills:
+    how often do you end the game with 0 whilst on the team
+    bans:
+    which champs are banned
+
+participants:
+    participantId, teamId
+    championId:
+        what champs are being played
+        what you play against or with
+        what champs you lose to or win with
+    spellId:
+        which spells are pick most often for that champ and role
+    highestAchievedSeasonTier:
+        the people you play with
+        which player rank you win with, win against, lose against
+    stats:
+        win:
+        maybe an easier way to know who won or lost
+    item0-6:
+        which items you end the game with and are they the correct item to buy
+        items bought for the champ
+    kill, death, assists:
+        your KDA and wtf are you doing
+        KDA ranking for the champ
+    largestKillingSpree, largestMultiKill, killingSprees:
+        an Ego stat
+        are you a carry player?
+        how often do you achieve this per game?
+        building out champ profile
+    longestTimeSpentLiving:
+        ego stat
+        do you play safe?
+        use in conjunction with champ (maybe some need to die or are happy to die based on role)
+    doubleKills, tripleKills, quadraKills, pentaKills:
+        ego stat
+        how often do you achieve this?
+        are you carrying the game?
+        used to build out champ profile
+    totalDamageDealt, magicDamageDealt, physicalDamageDealt, trueDamageDealt, largestCriticalStrike:
+        used to build out champ profile
+        how much damage you are dealing in the game?
+        gold to damange ratio
+        used in conjunction with items bought
+        ego stat
+    totalDamageDealtToChampions, magicDamageDealtToChampions, physicalDamageDealtToChampions, trueDamageDealtToChampions:
+        used to build out champ profile
+        how aggressive you are in lane and in the game
+        are you carrying
+        overall EGO stat
+    totalheal, totalunitshealed:
+        dependant on role and champ
+        used to build out champ profile
+        ego stat
+    damageSelfMitigated:
+        ego stat
+        used to build out champ profile
+    damageDealtToObjectives, damageDealtToTurrets, turrentkills, inhibkills:
+        how are you helping your team?
+        do you help take objectives
+        ego stat
+    visionScore, visionWardsBoughtInGame, sightWardsBoughtInGame, wardsPlaced, wardsKilled:
+        are you doing your job?
+        ego stat
+        what kind of style do you play
+        is this the right thing to do and spend your gold on (if gold was spent on wards etc.)
+    timeccingothers?
+    totaldmgtaken, magdmgtaken, phydmgtaken:
+        ego stat (conjuction with KDA, if you live loads and take loads of dmg, you are doing something right)
+        if you are taking loads of dmg and dying loads, we should provide a hint that you are not doing things right
+        maybe provide suggested champs to play
+        where ypu buying the correct items? suggest items as a retrospect
+    goldEarned, goldspent:
+        are you using your gold effectively
+        eog stat
+    totalminkills, neutralMinionsKilled, neutralMinionsKilledTeamJungle, neutralMinionsKilledEnemyJungle:
+        general CS level
+        where are you CSing
+        if you role is jungle, how well your are farming and where you are taxing and how much are you taxing
+    totalTimeCrowdControlDealt:
+        used to build champ profile
+        what kind of role are you providing and are you providing the correct thing based on your role
+        maybe advise on different champ
+    champLevel:
+        eog stat
+        how often are you ahead of you laner and global
+        how often are you behind
+        level and dmg output
+    firstBloodKill, firstBloodAssist, firstTowerKill, firstTowerAssist, firstInhibitorKill, firstInhibitorAssist:
+        ego stat
+        how often are you achiving this
+        are you contributing to team
+        are you carrying
+        are you gaining advantages
+    combatPlayerScore, objectivePlayerScore, totalPlayerScore, totalScoreRank:
+        seems like all of these are 0
+        we can build out our own score ranking for this
+        eog stat
+    perk0-perk5var3, perkPrimaryStyle, perkSubStyle, startperk0-2:
+        find out what this is
+    timeline:
+        cspermindelta
+        xppermindelta
+        goldperminddelta
+        dmgtakenpermindelta
+        is this the norm for this champ at this tier, if not suggest a champ that might help them climb
+        

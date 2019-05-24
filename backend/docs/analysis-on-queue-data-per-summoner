@@ -1,0 +1,16 @@
+which queues they play
+position preference for that queues
+tier, rank, points:
+    match-making
+    players better / worse than you (used to find out which lane opponent has gone on to do better or worse than you, to find out which team-mates have gone off to do better or worse than you)
+    how do you stack up against other players in this "rank, tier"
+wins / losses:
+    your win loss rate
+    analyse the games you won and loss to find out what is done right or wrong
+hotStreak, freshBlood, veteran, inactive, miniseries, win/loss:
+    hotStreak with freshBlood can be used to see if you are climbing
+    can be used to find out if you are hardstuck with veteran
+    inactive - can be used to see often you play lol and advise you to play normal as many things have changed (use LastUpdated from summoner info if it's present)
+    miniseries - can be used?
+
+leagueId can be used to compare you against the summoners in your league

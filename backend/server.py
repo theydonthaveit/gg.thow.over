@@ -7,18 +7,20 @@ from req_queue import get_queue_details
 from req_match_list import get_match_list
 from req_match_info import get_match_info
 from req_match_timeline import get_timeline_info
-from bad_reqs import dump_bad_req
+from req_participant_info import get_participant_info
+
+from bad_reqs import dump_bad_req, played_other
 
 headers = {
     "Origin": "https://developer.riotgames.com",
     "Accept-Charset": "application/x-www-form-urlencoded; charset=UTF-8",
-    "X-Riot-Token": "RGAPI-0f8ec8bb-1a99-41e6-ae82-ed3edc597847",
+    "X-Riot-Token": "RGAPI-11b31056-0ecb-4b45-9989-fbe925224283",
     "Accept-Language": "en-GB,en-US;q=0.9,en;q=0.8",
     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36",
 }
 
 summoner_details = get_summoner_details("meow side", headers)
-
+print(summoner_details)
 encrypted_summoner_id = summoner_details.get("id")
 account_id = summoner_details.get("accountId")
 name = summoner_details.get("name")
@@ -72,39 +74,35 @@ if not timeline_directory_exists:
     os.makedirs(timeline_directory)
 
 for match in match_list_data:
-    start_time = time.time()
     game_id = match.get("gameId", None)
+    queueId = match.get("queue")
 
-    if not game_id:
-        dump_bad_req({"bad_match": match})
-        continue
+    if queueId == 420:
+        match_info_data = get_match_info(game_id, headers)
 
-    match_info_data = get_match_info(game_id, headers)
+        try:
+            with open(
+                f"{match_directory}/{game_id}.json", "w"
+            ) as match_info_file:
+                json.dump(match_info_data, match_info_file, ensure_ascii=False)
+        except Exception as e:
+            print(e)
 
-    try:
-        with open(f"{match_directory}/{game_id}.json", "w") as match_info_file:
-            json.dump(match_info_data, match_info_file, ensure_ascii=False)
-    except Exception as e:
-        print(e)
+        match_timeline_data = get_timeline_info(game_id, headers)
 
-    match_timeline_data = get_timeline_info(game_id, headers)
+        try:
+            with open(
+                f"{timeline_directory}/{game_id}.json", "w"
+            ) as timeline_file:
+                json.dump(
+                    match_timeline_data, timeline_file, ensure_ascii=False
+                )
+        except Exception as e:
+            print(e)
 
-    try:
-        with open(f"{timeline_directory}/{game_id}.json", "w") as timeline_file:
-            json.dump(match_timeline_data, timeline_file, ensure_ascii=False)
-    except Exception as e:
-        print(e)
+        participant_identities = match_info_data.get("participantIdentities")
 
-    participant_identities = match_info_data.get("participantIdentities")
-
-    for participant in participant_identities:
-        
-    end_time = time.time()
-    time_lapse = end_time - start_time
-    print(time_lapse)
-
-    if float(time_lapse) < float(3):
-        time_per_call = float(3.4)
-        time_to_sleep = time_per_call - time_lapse
-        print(f"sleep time: {time_to_sleep}")
-        time.sleep(time_to_sleep)
+        for participant in participant_identities:
+            get_participant_info(participant, headers)
+    else:
+        played_other(queueId, name)

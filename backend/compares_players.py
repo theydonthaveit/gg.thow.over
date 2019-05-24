@@ -22,6 +22,7 @@ headers = {
 # champion_data = (
 #     "http://ddragon.leagueoflegends.com/cdn/6.24.1/data/en_US/champion.json"
 # )
+# http://ddragon.leagueoflegends.com/cdn/9.9.1/data/en_US/champion/Neeko.json
 
 import json
 import requests

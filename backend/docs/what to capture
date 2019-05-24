@@ -1,0 +1,43 @@
+base profile used for dashboard:
+    summonername
+    summonerlevel
+    leagueName
+    tier + rank + leaguepoints
+    wins
+    loses
+    inactive (T/F)
+    veteran (T)
+    freshblood (F)
+
+base_info:
+    id
+    accountid
+    summonername
+    summonerlevel
+    revisiondate
+
+queue_info: (loop over)
+    leagueid (used to calc the performance of each league)
+    leagueName (merely for display purposes)
+    queueType (used to build out multiple profiles for the user)
+    position (used to display the position preference of the player)
+    tier
+    rank
+    leaguepoints
+    win
+    loses
+    veteran (hard stuck)
+    inactive (not playing much)
+    freshblood (new to a rank)
+    hotstreak (climbing / doing well)
+* tier + rank + leaguepoints (user to compare you against other players, who is doing better or worse than you) (used for display purposes) (used to match making) (used for ladder)
+
+match_list: (loop over)
+    platformId (some idiot might not be playing on EUW, used to group players in regions, we cant mix players cross server as this will provide inaccurate stats for the ladder & area trouncing & match making)
+    season (used to group players, same as the point about platformID, we cant use different seasons to match people and compare current ladder stats)
+    gameid (used to retrieve game data)
+    champion (used for general champ played analytics) (used for user specific champ played stats) (used to provide tips and hints on lane matchups or how to play the champ based on the players performance)
+    queue (group games by queue) (used to display the split between game types played by user) (used for general analytics, how players before in ranked based on time spent in queuetypes)
+    timestamp (used for data refreshing)
+    role (compare to position preference)
+    lane (compare to position preference)
